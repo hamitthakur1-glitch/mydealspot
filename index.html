@@ -1,0 +1,295 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #222;
+  background: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+
+.topbar {
+  background: #e91b3a;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo span {
+  color: #ffe082;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+  background: #fff;
+  padding: 40px 0 32px;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.hero p {
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.search-form select,
+.search-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  min-width: 140px;
+  flex: 1 1 140px;
+}
+
+.search-form button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #e91b3a;
+  color: #fff;
+  cursor: pointer;
+  flex: 1 1 140px;
+}
+
+.search-form button:hover {
+  background: #c21833;
+}
+
+.hero-tags {
+  font-size: 13px;
+  color: #777;
+}
+
+.hero-right {
+  display: grid;
+  gap: 12px;
+}
+
+.stats-card {
+  background: #ffeef2;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stats-card h2 {
+  font-size: 26px;
+  color: #e91b3a;
+  margin-bottom: 4px;
+}
+
+/* Sections */
+
+.section {
+  padding: 32px 0;
+  background: #fff;
+}
+
+.section.alt {
+  background: #fafafa;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.card .price {
+  font-weight: 700;
+  color: #e91b3a;
+}
+
+.card .meta {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Chips */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips span {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #eee;
+  font-size: 13px;
+}
+
+/* Contact */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.bullets {
+  list-style: disc;
+  margin-left: 18px;
+  color: #555;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.lead-form {
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.lead-form label {
+  display: block;
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.lead-form input,
+.lead-form select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.lead-form button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #e91b3a;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.lead-form button:hover {
+  background: #c21833;
+}
+
+/* Footer */
+
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 16px 0 20px;
+  font-size: 13px;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-inner p + p {
+  margin-top: 4px;
+  color: #999;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu a {
+    margin-left: 12px;
+    font-size: 13px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+}
